@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>The Palak Experience</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@400;600&family=Dancing+Script:wght@600&family=Noto+Sans+Gurmukhi:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bl:#fbd5e0;--ro:#e8799f;--go:#d4af6a;--la:#c9b6f0;--cr:#fff7ee;--pe:#ffcfb3;--pl:#3b1a3f;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{height:auto;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+button:focus:not(:focus-visible){outline:none}
+body{margin:0;background:linear-gradient(160deg,#fff7ee,#fbd5e0 45%,#e4d9fa);background-attachment:fixed;color:var(--pl);font:16px/1.6 Poppins,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;margin:0 0 .5em}
+h2{font-size:clamp(1.6rem,5vw,2.8rem);text-align:center}
+.hand{font-family:'Dancing Script',cursive}
+section{padding:72px 18px;max-width:1000px;margin:auto;text-align:center;opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+section.in,#hero{opacity:1;transform:none}
+.btn{background:linear-gradient(135deg,var(--ro),#c85a8a);color:#fff;border:0;border-radius:40px;padding:14px 28px;min-height:48px;font:600 1rem Poppins,sans-serif;cursor:pointer;box-shadow:0 6px 20px #e8799f66;transition:transform .2s}
+.btn:active{transform:scale(.95)}.btn.g{background:linear-gradient(135deg,#e9c97f,var(--go));color:var(--pl)}
+.card{background:#ffffffa6;backdrop-filter:blur(6px);border:1.5px solid var(--go);border-radius:18px;padding:18px;box-shadow:0 8px 24px #3b1a3f1a}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:26px 0}
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+#hero h1{font-size:clamp(2.2rem,9vw,5.5rem);background:linear-gradient(90deg,var(--ro),var(--go),var(--la),var(--ro));background-size:300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gr 8s linear infinite}
+@keyframes gr{to{background-position:300%}}
+.fl{position:fixed;pointer-events:none;z-index:0;opacity:.5;animation:fy 9s ease-in-out infinite alternate}
+@keyframes fy{to{transform:translateY(-30px) rotate(15deg)}}
+/* intro */
+#intro{position:fixed;inset:0;z-index:100;background:radial-gradient(#2a0f3a,#07030c);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;transition:opacity 1s,transform 1s}
+#intro.out{opacity:0;transform:scale(1.6);pointer-events:none}
+#il{font:600 clamp(1.2rem,4.5vw,2.4rem) 'Playfair Display',serif;min-height:3.5em;transition:opacity .5s;letter-spacing:.05em}
+#il.warn{color:#ffb86b;border:1px solid #ffb86b;padding:12px;border-radius:8px;font-family:monospace}
+#bar{width:min(80vw,380px);height:10px;border-radius:9px;background:#ffffff22;margin:20px 0;overflow:hidden;display:none}
+#bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ro),var(--go));transition:width .15s}
+#skip{position:absolute;bottom:20px;background:none;border:0;color:#ffffff88;cursor:pointer;min-height:44px}
+/* compliments */
+.cc{opacity:0;font-weight:600}
+.cc.show{opacity:1}
+.a0{animation:sl .7s both}.a1{animation:rt .8s both}.a2{animation:fp .8s both}.a3{animation:gw 1s both}
+@keyframes sl{from{opacity:0;transform:translateX(-60px)}}
+@keyframes rt{from{opacity:0;transform:rotate(-12deg) scale(.7)}}
+@keyframes fp{from{opacity:0;transform:rotateY(90deg)}}
+@keyframes gw{from{opacity:0;box-shadow:0 0 0 #fff}50%{box-shadow:0 0 30px 6px var(--go)}}
+/* awards */
+.aw{cursor:pointer;background:linear-gradient(160deg,#fff4cf,#f1d48d);border:2px solid var(--go);text-align:center;font:inherit;color:var(--pl)}
+.aw b{display:block;font-size:2rem}.aw p{margin:.5em 0 0;font-size:.85rem;display:none}.aw.o p{display:block}
+/* punjab */
+#pj{background:linear-gradient(180deg,#ffd24a33,#ff7aa233);border-radius:28px;border:3px dashed var(--ro);position:relative}
+.ph{height:30px;margin:14px 0;background:repeating-linear-gradient(90deg,#e8799f 0 12px,#ffd24a 12px 24px,#7b3fa0 24px 36px,#ff8c42 36px 48px);clip-path:polygon(0 50%,5% 0,10% 50%,15% 0,20% 50%,25% 0,30% 50%,35% 0,40% 50%,45% 0,50% 50%,55% 0,60% 50%,65% 0,70% 50%,75% 0,80% 50%,85% 0,90% 50%,95% 0,100% 50%,95% 100%,90% 50%,85% 100%,80% 50%,75% 100%,70% 50%,65% 100%,60% 50%,55% 100%,50% 50%,45% 100%,40% 50%,35% 100%,30% 50%,25% 100%,20% 50%,15% 100%,10% 50%,5% 100%)}
+.sw{display:inline-block;transform-origin:bottom;animation:sw 3s ease-in-out infinite alternate}
+@keyframes sw{to{transform:rotate(9deg)}}
+.pun{font:600 clamp(1.3rem,5vw,2.2rem) 'Noto Sans Gurmukhi',sans-serif;color:#7b2d6e;margin:14px 0 4px}
+/* machine */
+#mach{max-width:520px;margin:20px auto;background:linear-gradient(160deg,#3b1a3f,#6a2c70);color:#fff;border:3px solid var(--go);border-radius:26px;padding:24px}
+#mt{min-height:110px;display:flex;align-items:center;justify-content:center;font:600 1.2rem 'Playfair Display',serif;margin-bottom:12px}
+.pop{animation:po .6s both}.spn{animation:spn .7s both}.drp{animation:dr .7s both}
+@keyframes po{from{opacity:0;transform:scale(.5)}}
+@keyframes spn{from{opacity:0;transform:rotate(-180deg) scale(.4)}}
+@keyframes dr{from{opacity:0;transform:translateY(-40px)}}
+.cnt{font:600 .9rem monospace;letter-spacing:.2em;color:var(--go);margin-top:12px}
+/* doors */
+.dr{display:inline-block;width:130px;height:190px;margin:10px;border-radius:65px 65px 6px 6px;background:linear-gradient(#8a4b8e,#3b1a3f);border:4px solid var(--go);color:#fff;font:600 .85rem Poppins;cursor:pointer;transition:transform .3s;padding:8px}
+.dr:hover{transform:scale(1.06) rotateY(12deg)}.dr b{font-size:2rem;display:block}
+#modal{position:fixed;inset:0;z-index:90;background:#1b0a2299;display:none;align-items:center;justify-content:center;padding:16px}
+#modal.on{display:flex}#mb{background:var(--cr);border-radius:22px;max-width:760px;width:100%;max-height:85vh;overflow:auto;padding:24px;position:relative;border:3px solid var(--go)}
+.x{position:absolute;top:8px;right:8px;background:none;border:0;font-size:1.6rem;cursor:pointer;min-width:44px;min-height:44px;color:var(--pl)}
+.fr{display:inline-block;margin:8px;padding:16px;border:5px double var(--go);background:#fffaf0;max-width:200px;animation:fy 5s ease-in-out infinite alternate;font-family:'Playfair Display',serif}
+/* letter */
+#env{width:min(300px,86vw);height:190px;margin:30px auto;position:relative;cursor:pointer}
+#env .b{position:absolute;inset:0;background:linear-gradient(#f9cfdc,#e8799f);border-radius:8px}
+#env .fp{position:absolute;top:0;left:0;right:0;height:100px;background:#e8799f;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s;z-index:2}
+#env.open .fp{transform:rotateX(180deg);z-index:0}
+#env .seal{position:absolute;top:64px;left:50%;margin-left:-26px;width:52px;height:52px;border-radius:50%;background:radial-gradient(#f0d27a,#b8862b);z-index:3;display:grid;place-items:center;font-size:1.4rem;transition:opacity .4s}
+#env.open .seal{opacity:0}
+#let{display:none;text-align:left;max-width:640px;margin:0 auto;background:#fffdf7;padding:28px;border-radius:12px;border:1px solid var(--go);box-shadow:0 10px 40px #3b1a3f33;font-size:1.05rem}
+#let.on{display:block;animation:dr .9s both}
+#let p{margin:.8em 0}
+/* garden */
+.gd{display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:6px;margin:20px 0}
+.fb{background:none;border:0;cursor:pointer;min-height:76px;transition:transform .5s}
+.fb svg{width:60px;height:60px;transform:scale(.55);transition:transform .6s cubic-bezier(.3,1.6,.5,1)}
+.fb.o svg{transform:scale(1.15) rotate(30deg)}
+.wish{min-height:70px;font:600 1.3rem 'Dancing Script',cursive;margin:10px 0}
+/* cake */
+#cake{width:min(360px,90vw);transition:filter .6s}#cake.glow{filter:drop-shadow(0 0 22px #ffd24a)}
+.fm{transform-origin:50% 100%;animation:fk .4s ease-in-out infinite alternate}
+@keyframes fk{to{transform:scale(1.15,.9)}}
+.fm.off{display:none}
+/* quiz */
+.qo{display:block;width:100%;margin:8px 0;text-align:left;background:#fff;border:1.5px solid var(--la);border-radius:12px;padding:12px;font:inherit;color:inherit;cursor:pointer;min-height:48px}
+.qo:hover{background:#fdeaf1}
+/* inf */
+#inf{font-size:1.1rem;padding:22px 30px;animation:pu 2.2s ease-in-out infinite}
+@keyframes pu{50%{box-shadow:0 0 34px 8px #e8799faa}}
+#it{min-height:90px;font:600 1.5rem 'Dancing Script',cursive;margin:16px 0}
+/* particles, toast, surprises */
+.p{position:fixed;pointer-events:none;z-index:120;animation:pf 1.1s ease-out forwards}
+@keyframes pf{to{transform:translate(var(--dx),var(--dy)) rotate(240deg);opacity:0}}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,150%);z-index:130;background:var(--pl);color:#fff;padding:12px 40px 12px 18px;border-radius:14px;max-width:92vw;transition:transform .5s;border:1px solid var(--go)}
+#toast.on{transform:translate(-50%,0)}#toast button{position:absolute;right:2px;top:2px;background:none;border:0;color:#fff;font-size:1.2rem;min-width:40px;min-height:40px;cursor:pointer}
+.sp{position:fixed;z-index:60;background:none;border:0;font-size:2.2rem;cursor:pointer;min-width:48px;min-height:48px;animation:fy 3s ease-in-out infinite alternate}
+.bf{position:fixed;z-index:55;font-size:2rem;left:-60px;top:30%;border:0;background:none;animation:bfl 12s linear forwards}
+@keyframes bfl{to{left:110vw;top:55%}}
+.hid{opacity:.15;cursor:pointer;background:none;border:0;font-size:1.3rem;min-width:44px;min-height:44px}.hid:hover{opacity:1}
+#fin{position:fixed;inset:0;z-index:110;background:#07030cf2;color:#fff;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+#fin.on{display:flex}#ft{font:800 clamp(1.5rem,7vw,4rem) 'Playfair Display',serif;transition:opacity .8s;text-shadow:0 0 30px var(--ro)}
+#cv{position:fixed;inset:0;pointer-events:none;z-index:115}
+footer{padding:40px 16px;text-align:center;font-size:.8rem;letter-spacing:.2em}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-iteration-count:1!important;transition-duration:.01s!important}html{scroll-behavior:auto}}
+</style></head><body>
+<div id="intro"><div id="il"></div><div id="bar"><i></i></div><button class="btn" id="enter" style="display:none">ENTER YOUR WORLD ✨</button><button id="skip">skip intro</button></div>
+<div class="fl" style="left:5%;top:20%;font-size:2rem">🌸</div><div class="fl" style="right:6%;top:45%;font-size:2rem;animation-delay:-3s">✨</div><div class="fl" style="left:8%;top:75%;font-size:2rem;animation-delay:-5s">🌼</div>
+
+<section id="hero"><div class="hand" style="font-size:1.6rem;color:var(--ro)">Happy Birthday <button class="hid" id="sparkle" aria-label="hidden surprise">✨</button></div><h1 id="logo">THE PALAK EXPERIENCE</h1><p class="hand" style="font-size:1.5rem">Because ordinary celebrations were never enough for someone extraordinary.</p><button class="btn" onclick="document.getElementById('comp').scrollIntoView()">Start exploring ↓</button></section>
+
+<section id="comp"><h2>WE NEED TO TALK ABOUT HOW AMAZING YOU ARE.</h2><div class="grid" id="cg"></div><button class="btn" id="more">REVEAL MORE COMPLIMENTS</button> <button class="btn g" id="dc">DON’T CLICK THIS</button><p id="dcr" class="hand" style="font-size:1.4rem"></p></section>
+
+<section id="awd"><h2>THE OFFICIAL PALAK AWARDS 2026</h2><p>Tap a trophy to read the citation.</p><div class="grid" id="ag"></div><h3>CONGRATULATIONS, PALAK. YOU HAVE WON EVERYTHING. BECAUSE WHY WOULD WE GIVE YOU JUST ONE AWARD?</h3></section>
+
+<section id="pj"><div class="ph"></div><h2>NOT EVERYONE CAN CARRY THIS MUCH PUNJABI ENERGY.</h2><p>Some are born to follow trends. Some are born to create their own vibe. And then there’s PALAK — a whole different level of Punjab Di Kudi.</p>
+<div style="font-size:0"><svg class="sw" width="60" height="90" viewBox="0 0 60 90"><path d="M30 90V35" stroke="#5b8c3a" stroke-width="3"/><g fill="#ffc400"><circle cx="30" cy="22" r="9"/><circle cx="19" cy="30" r="9"/><circle cx="41" cy="30" r="9"/><circle cx="22" cy="42" r="8"/><circle cx="38" cy="42" r="8"/></g><circle cx="30" cy="32" r="6" fill="#c86b00"/></svg>
+<svg class="sw" width="100" height="90" viewBox="0 0 100 90" style="animation-duration:1s"><ellipse cx="50" cy="45" rx="42" ry="28" fill="#b5651d" stroke="#5a2d0c" stroke-width="3"/><path d="M12 30 62 60M30 20 78 66M50 18 88 52" stroke="#f4d58d" stroke-width="2"/><ellipse cx="50" cy="45" rx="42" ry="28" fill="none" stroke="#e8799f" stroke-width="4" stroke-dasharray="5 6"/></svg>
+<svg class="sw" width="110" height="80" viewBox="0 0 110 80"><path d="M10 60Q12 20 50 28L70 40Q92 44 100 56 92 70 50 68Z" fill="#e8799f" stroke="#7b2d6e" stroke-width="3"/><path d="M4 66h96" stroke="#ffd24a" stroke-width="6"/><circle cx="48" cy="40" r="6" fill="#ffd24a"/></svg>
+<svg class="sw" width="60" height="90" viewBox="0 0 60 90" style="animation-delay:-1s"><path d="M30 90V35" stroke="#5b8c3a" stroke-width="3"/><g fill="#ffc400"><circle cx="30" cy="22" r="9"/><circle cx="19" cy="30" r="9"/><circle cx="41" cy="30" r="9"/><circle cx="22" cy="42" r="8"/><circle cx="38" cy="42" r="8"/></g><circle cx="30" cy="32" r="6" fill="#c86b00"/></svg></div>
+<div class="pun">ਸੋਹਣੀ ਵੀ, ਸੁਨੱਖੀ ਵੀ, ਤੇ ਸਭ ਤੋਂ ਵੱਖਰੀ ਵੀ!</div><p class="hand" style="font-size:1.4rem;margin-top:0">Beautiful, graceful, and different from everyone else!</p><div class="ph"></div><button class="hid" id="heart" aria-label="hidden heart">❤️</button></section>
+
+<section id="cm"><h2>FEELING LOW ON COMPLIMENTS? IMPOSSIBLE.</h2><div id="mach"><div id="mt">Press the glowing button…</div><button class="btn g" id="gm">GIVE ME A COMPLIMENT</button><div class="cnt" id="mc">COMPLIMENTS DELIVERED: 000</div></div></section>
+
+<section id="rooms"><h2>THREE SECRET ROOMS</h2><p>Knock on a door. Something is waiting inside.</p><button class="dr" data-r="1"><b>🖼️</b>The Hall of Compliments</button><button class="dr" data-r="2"><b>🌷</b>The Garden of Good Wishes</button><button class="dr" data-r="3"><b>👑</b>The Hall of Fame</button></section>
+
+<section id="lt"><h2>ONE LETTER. A THOUSAND GOOD WISHES.</h2><div id="env"><div class="b"></div><div class="fp"></div><div class="seal">❤️</div></div><p id="lh">Tap the golden seal</p>
+<div id="let"><p><b>Dear Palak,</b></p><p><b>HAPPY BIRTHDAY!</b></p><p>I hope you know how genuinely special you are.</p><p>You have your own charm, your own personality, and a presence that makes you unforgettable.</p><p>I hope this new chapter brings you countless reasons to smile, opportunities to achieve everything you dream of, and moments that make life feel beautiful.</p><p>Never underestimate your own worth. Never stop believing in yourself. And never stop being the wonderful person you are.</p><p>Keep shining, keep laughing, and keep carrying that beautiful Punjab Di Kudi energy everywhere you go.</p><p>You deserve happiness, success, peace, and everything wonderful life has to offer.</p><p>And remember, this website has one permanent rule:</p><p><b>PALAK APPRECIATION IS NEVER OPTIONAL.</b></p><p>Happy Birthday once again!</p><p class="hand" style="font-size:1.4rem">From your best friend. ❤️</p></div></section>
+
+<section id="gar"><h2>THE INTERACTIVE WISH GARDEN</h2><p>Tap the buds and watch them bloom.</p><div class="gd" id="gd"></div><div class="wish" id="gw">Pick a flower…</div><div class="cnt" id="gc">BLOOMS OPENED: 0 / 20</div><h3 id="gu" style="display:none;color:var(--ro)">YOU HAVE UNLOCKED THE SECRET GARDEN OF ENDLESS GOOD WISHES.</h3></section>
+
+<section id="ck"><h2>THE CAKE IS READY. THE STAR HAS ARRIVED.</h2>
+<svg id="cake" viewBox="0 0 300 300"><ellipse cx="150" cy="278" rx="130" ry="14" fill="#e8d5f0"/>
+<rect x="30" y="215" width="240" height="60" rx="14" fill="#f7a8c4"/><path d="M30 225q15 20 30 0t30 0 30 0 30 0 30 0 30 0 30 0 30 0v-8H30z" fill="#fff"/>
+<rect x="60" y="150" width="180" height="62" rx="14" fill="#f4b8d0"/><path d="M60 160q15 18 30 0t30 0 30 0 30 0 30 0 30 0v-8H60z" fill="#fff"/>
+<rect x="95" y="95" width="110" height="52" rx="12" fill="#f9c6da"/><path d="M95 104q13 16 27 0t27 0 27 0 27 0v-7H95z" fill="#fff"/>
+<rect x="30" y="248" width="240" height="5" fill="#d4af6a"/><rect x="60" y="188" width="180" height="4" fill="#d4af6a"/><rect x="95" y="128" width="110" height="4" fill="#d4af6a"/>
+<g fill="#e8799f"><circle cx="60" cy="236" r="6"/><circle cx="240" cy="236" r="6"/><circle cx="90" cy="170" r="5"/><circle cx="210" cy="170" r="5"/></g><g fill="#ffd24a"><circle cx="60" cy="236" r="2"/><circle cx="240" cy="236" r="2"/></g>
+<rect x="105" y="255" width="90" height="16" rx="4" fill="#fff7ee" stroke="#d4af6a"/><text x="150" y="267" text-anchor="middle" font-size="11" font-family="Playfair Display,serif" font-weight="700" fill="#3b1a3f" letter-spacing="2">PALAK</text>
+<g id="cd"></g></svg>
+<p><button class="btn" id="wsh">MAKE A WISH</button></p><h3 id="wm" style="display:none;color:var(--ro)">HERE’S TO ANOTHER YEAR OF BEING ABSOLUTELY ICONIC!</h3></section>
+
+<section id="qz"><h2>HOW WELL DO YOU KNOW THE QUEEN?</h2><div class="card" id="qb" style="max-width:560px;margin:auto"></div></section>
+
+<section id="ifs"><h2>THE INFINITE APPRECIATION BUTTON</h2><button class="btn" id="inf">PRESS FOR UNLIMITED PALAK APPRECIATION.</button><div id="it"></div><div class="cnt" id="ic">APPRECIATION LEVEL: 000</div></section>
+
+<section id="end"><button class="btn g" id="last">Is that all? ✨</button></section>
+<footer>CRAFTED WITH APPRECIATION FOR PALAK.</footer>
+<button id="mu" class="sp" style="left:auto;right:12px;top:auto;bottom:14px;animation:none;font-size:1.5rem" aria-label="toggle music">🎵</button><div id="modal"><div id="mb"></div></div><div id="toast"><span id="tt"></span><button aria-label="close">×</button></div><canvas id="cv"></canvas>
+<div id="fin"><div id="ft"></div><button class="btn" id="fx" style="display:none;margin-top:28px">Close ❤️</button></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],R=a=>a[Math.random()*a.length|0],rm=matchMedia("(prefers-reduced-motion:reduce)").matches,pad=n=>String(n).padStart(3,"0"),sl=ms=>new Promise(r=>setTimeout(r,ms));
+const E=["Beauty? Absolutely unmatched.","Elegance? Naturally installed.","Personality? One of a kind.","Smile? Instant mood changer.","Charm? Unlimited supply.","Confidence? Main character energy.","Vibe? Impossible to replicate.","Style? Effortlessly iconic.","Presence? Always memorable.","Punjabi swag? Beyond explanation.","Grace? Simply extraordinary.","Spark? Permanently switched on."];
+const C=["Palak, even the stars would ask you for styling advice.","Your existence is a whole aesthetic.","Some people have a vibe. You ARE the vibe.","You’re not just one in a million. You’re an entire category of your own.","Confidence looks good when it’s genuinely yours.","Your laugh could fix a Monday.","You make ordinary rooms feel like celebrations.","Kindness suits you better than any outfit.","You’re proof that good energy is contagious.","Sunshine called; it wants its glow back from you.","You walk in and the mood upgrades itself.","Your charm needs its own zip code.","You’re the plot twist everyone is lucky to get.","Even your silence has style.","You carry grace like it’s second nature.","Your smile is a free upgrade for everyone nearby.","You’re the friend people thank the universe for.","You make “effortless” look like hard work for everyone else.","Your heart is as beautiful as your style.","The word “iconic” was clearly written about you.","You turn little moments into memories.","Your presence is the best kind of present.","You have the rare gift of making people feel seen.","Mirrors are lucky to know you.","You’re a masterpiece that doesn’t need a frame.","Your positivity is a superpower.","You’d make a rainy day look like a photoshoot.","You’re soft where it matters and strong where it counts.","Your vibe is premium, always.","You light up the room without even trying.","Being your friend is a daily bonus.","You’re the reason “best friend” is a title worth having.","Your personality should be limited edition — but you’re one of one.","You make kindness look stylish.","Your energy is a warm hug in human form.","You’re the glitter in a plain-paper world.","Your style has its own fan club (me, president).","Even your “hello” feels like good news.","You’re a walking good-luck charm.","Your dreams are lucky to have you chasing them.","You’re the kind of rare that can’t be copied.","Your spirit is pure Punjabi sunshine.","You glow brighter than festival lights.","You make confidence look contagious.","Your beauty is loud, but your kindness is louder.","You’re the main character, and the supporting cast adores you.","Your friendship is a five-star experience.","Nobody does being you better than you.","You make the world a little softer and a lot more fun.","Everything about you says “class,” politely and loudly.","You’re a whole festival in a single person.","Honestly? The universe did its best work on you."];
+const W=["May your year be as bright as your smile.","Wishing you laughter that lasts all year long.","May every dream you carry come true.","Here’s to peace in your heart and joy in your days.","May success follow you everywhere you go.","Wishing you friends as wonderful as you are.","May your path be covered in flowers.","Here’s to new adventures and fearless choices.","May you always feel as loved as you truly are.","Wishing you health, success and Punjabi-sized happiness.","May every single day this year feel a little magical.","Here’s to mornings that start with good news.","May your confidence keep growing like a garden.","Wishing you moments that take your breath away.","May every goal you set find its way to you.","Here’s to being unapologetically, beautifully you.","May your heart stay light and your spirit stay bold.","Wishing you endless chai-and-laughter evenings.","May this year be your best chapter yet.","Wishing you a life that sparkles as much as you do."];
+const AW=[["World’s Most Unforgettable Smile","Once seen, never forgotten. Side effects include everyone smiling back."],["Best Punjabi Girl Energy","Awarded for flawless swag, warmth and full-volume personality."],["CEO of Being Effortlessly Beautiful","Zero meetings required. The glow is the whole business plan."],["Lifetime Achievement in Being Iconic","Retroactively applied to every year so far."],["Most Likely to Brighten Someone’s Day","Judges note: it happens every single time."],["Queen of Main Character Energy","The cameras follow her. The universe approves."],["Excellence in Being One of a Kind","No duplicates exist. We checked twice."],["The Personality Award — No Competition","The other nominees withdrew out of respect."]];
+function burst(x,y,n=14,set=["✨","🌸","💛","⭐","💖"]){if(rm)n=4;for(let i=0;i<n;i++){const s=document.createElement("span");s.className="p";s.textContent=R(set);s.style.cssText=`left:${x}px;top:${y}px;--dx:${(Math.random()-.5)*240}px;--dy:${(Math.random()-.9)*220}px;font-size:${14+Math.random()*14}px`;document.body.append(s);setTimeout(()=>s.remove(),1200)}}
+const ev=e=>[e.clientX||innerWidth/2,e.clientY||innerHeight/2];
+let tt;function toast(m){$("#tt").textContent=m;$("#toast").classList.add("on");clearTimeout(tt);tt=setTimeout(()=>$("#toast").classList.remove("on"),5500)}
+$("#toast button").onclick=()=>$("#toast").classList.remove("on");
+function card(t,i){const d=document.createElement("div");d.className="card cc show a"+(i%4);d.textContent=t;return d}
+// intro
+async function intro(){const l=$("#il"),say=async(t,ms,c="")=>{l.className=c;l.style.opacity=0;await sl(300);l.textContent=t;l.style.opacity=1;await sl(ms)};
+if(window._skip)return;await say("HEY... YOU!",1400);await say("YES, YOU. THE ONE AND ONLY PALAK.",1800);await say("WE HAVE A LITTLE PROBLEM...",1600);await say("⚠ WARNING: AN EXTRAORDINARY PERSON HAS BEEN DETECTED.",2000,"warn");await say("INITIATING SPECIAL BIRTHDAY PROTOCOL...",300);const b=$("#bar");b.style.display="block";for(let p=0;p<=100;p+=5){b.firstChild.style.width=p+"%";await sl(90)}b.style.display="none";await say("ACCESS GRANTED. WELCOME, PUNJAB DI KUDI.",300);$("#enter").style.display="inline-block";$("#skip").style.display="none"}
+$("#skip").onclick=()=>{window._skip=1;$("#il").textContent="WELCOME, PUNJAB DI KUDI.";$("#bar").style.display="none";$("#enter").style.display="inline-block";$("#skip").style.display="none"};
+$("#enter").onclick=e=>{burst(...ev(e),24);$("#intro").classList.add("out");setTimeout(()=>{$("#intro").remove();schedule()},1000)};intro();
+// compliments
+let ci=0,pool=[...C].sort(()=>Math.random()-.5);E.forEach((t,i)=>$("#cg").append(card(t,i)));
+$("#more").onclick=async()=>{for(let k=0;k<4;k++){if(!pool.length)pool=[...C].sort(()=>Math.random()-.5);const c=card(pool.pop(),ci++);$("#cg").append(c);if(k==0)c.scrollIntoView({block:"center",behavior:rm?"auto":"smooth"});await sl(rm?0:260)}};
+$("#dc").onclick=e=>{$("#dcr").textContent="YOU WERE WARNED... BUT HERE’S ANOTHER COMPLIMENT ANYWAY. 😂❤️ "+R(C);burst(...ev(e),12)};
+// awards
+AW.forEach(a=>{const b=document.createElement("button");b.className="card aw";b.innerHTML=`<b>🏆</b>${a[0]}<p>${a[1]}</p>`;b.onclick=e=>{b.classList.toggle("o");if(b.classList.contains("o"))burst(...ev(e),8,["🏆","✨","⭐"])};$("#ag").append(b)});
+// machine
+let mc=0,last=-1;$("#gm").onclick=()=>{let i;do i=Math.random()*C.length|0;while(i==last);last=i;const t=$("#mt");t.className="";void t.offsetWidth;t.className=R(["pop","spn","drp"]);t.textContent=C[i];$("#mc").textContent="COMPLIMENTS DELIVERED: "+pad(++mc)};
+// flowers
+const FC=["#e8799f","#c9b6f0","#ffb86b","#f7a8c4","#ffd24a","#ff8fab","#b79df0","#ffcfb3","#f4a6d7","#fbbf77"];
+const fsv=c=>`<svg viewBox="0 0 60 60"><g fill="${c}" opacity=".92">${[0,60,120,180,240,300].map(a=>`<ellipse cx="30" cy="14" rx="9" ry="14" transform="rotate(${a} 30 30)"/>`).join("")}</g><circle cx="30" cy="30" r="8" fill="#ffd24a"/></svg>`;
+function garden(host,n,out,onopen){let o=0;for(let i=0;i<n;i++){const b=document.createElement("button");b.className="fb";b.setAttribute("aria-label","flower");b.innerHTML=fsv(FC[i%FC.length]);b.onclick=e=>{const first=!b.classList.contains("o");b.classList.add("o");burst(...ev(e),10,["🌸","✨","💛"]);out.textContent=W[(i*7+3)%20];if(first){o++;onopen&&onopen(o)}};host.append(b)}}
+garden($("#gd"),20,$("#gw"),o=>{$("#gc").textContent=`BLOOMS OPENED: ${o} / 20`;if(o==5){$("#gu").style.display="block";burst(innerWidth/2,innerHeight/2,26)}});
+// rooms
+$$(".dr").forEach(d=>d.onclick=()=>{const r=d.dataset.r,m=$("#mb");let h='<button class="x" aria-label="close">×</button>';
+if(r==1){h+="<h2>THE HALL OF COMPLIMENTS</h2>"+[...C].sort(()=>Math.random()-.5).slice(0,12).map((t,i)=>`<div class="fr" style="animation-delay:-${i*.7}s">${t}</div>`).join("")}
+if(r==2){h+='<h2>THE GARDEN OF GOOD WISHES</h2><div class="gd" id="rg"></div><div class="wish" id="rw">Tap a flower…</div>'}
+if(r==3){h+="<h2>THE HALL OF FAME</h2>"+["Grand Duchess of Good Vibes","Honorary Mayor of Smile City","Chief Collector of Compliments","Ambassador of Punjabi Sunshine","Professor of Effortless Style","Keeper of the Best Laughter","Undisputed Queen of Kind Hearts","Hall-of-Famer, First Ballot, Unanimous"].map(t=>`<div class="card" style="margin:8px 0">👑 <b>${t}</b></div>`).join("")}
+m.innerHTML=h;$("#modal").classList.add("on");if(r==2)garden($("#rg"),12,$("#rw"));m.querySelector(".x").onclick=()=>$("#modal").classList.remove("on")});
+$("#modal").onclick=e=>{if(e.target.id=="modal")e.target.classList.remove("on")};
+// letter
+$("#env").onclick=e=>{$("#env").classList.add("open");$("#lh").style.display="none";burst(...ev(e),16,["💌","✨","❤️"]);setTimeout(()=>{$("#let").classList.add("on");$("#let").scrollIntoView({block:"start",behavior:rm?"auto":"smooth"})},700)};
+// cake
+const fl=$("#cd");[120,150,180].forEach(x=>fl.insertAdjacentHTML("beforeend",`<rect x="${x-3}" y="68" width="6" height="28" fill="#ffd24a" stroke="#d4af6a"/><ellipse class="fm" cx="${x}" cy="60" rx="5" ry="9" fill="#ff9a3c"/>`));
+$("#wsh").onclick=e=>{$$(".fm").forEach(f=>f.classList.add("off"));$("#cake").classList.add("glow");burst(...ev(e),30,["✨","⭐","🌟","💛"]);$("#wm").style.display="block"};
+// quiz
+const Q=[["Who deserves the biggest birthday celebration?",["Palak, obviously","Palak, without question","Palak (all other answers are also Palak)"],"Correct! The committee was unanimous."],["Who has the most iconic Punjabi energy?",["Palak","Palak, but louder","The entire Punjab nominates Palak"],"Yes! Even the dhol agrees."],["Who should receive unlimited compliments?",["Palak","Palak, plus interest","Palak, forever"],"Unlimited it is. Terms and conditions: none."],["Who is today’s main character?",["Palak, as always","Palak, in glorious HD","Palak, with a spotlight"],"Spotlight is on. Take your bow!"]];
+let qi=0;function qs(){const b=$("#qb");if(qi>=Q.length){b.innerHTML="<h3>CONGRATULATIONS! YOU HAVE OFFICIALLY CONFIRMED THAT PALAK IS ICONIC.</h3>";burst(innerWidth/2,innerHeight/2,26);return}const q=Q[qi];b.innerHTML=`<div class="cnt">QUESTION ${qi+1} / ${Q.length}</div><h3>${q[0]}</h3>`;q[1].forEach(a=>{const o=document.createElement("button");o.className="qo";o.textContent=a;o.onclick=e=>{burst(...ev(e),10);b.innerHTML=`<h3>${q[2]} 🎉</h3><button class="btn" id="qn">${qi==Q.length-1?"Finish":"Next →"}</button>`;$("#qn").onclick=()=>{qi++;qs()}};b.append(o)})}qs();
+// infinite
+let ic=0;const PRE=["Fun fact:","Breaking news:","Reminder:","Official statement:","Palak,","Honestly,"],TAIL=["you’re amazing.","you’re irreplaceable.","the world is better with you in it.","you’re a joy.","your sparkle is real.","you’re iconic, and that’s final."];
+$("#inf").onclick=e=>{const t=$("#it");t.className="";void t.offsetWidth;t.className=R(["pop","spn","drp"]);t.textContent=Math.random()<.6?R(C):R(PRE)+" "+R(TAIL);$("#ic").textContent="APPRECIATION LEVEL: "+pad(++ic);burst(...ev(e),6)};
+// final
+const cv=$("#cv"),cx=cv.getContext("2d");let parts=[],raf;function conf(){cv.width=innerWidth;cv.height=innerHeight;parts=Array.from({length:rm?0:90},()=>({x:Math.random()*cv.width,y:-20-Math.random()*200,v:2+Math.random()*3,s:5+Math.random()*6,c:R(FC),r:Math.random()*6}));const t0=performance.now();(function f(t){cx.clearRect(0,0,cv.width,cv.height);parts.forEach(p=>{p.y+=p.v;p.x+=Math.sin(p.y/30);p.r+=.1;cx.fillStyle=p.c;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillRect(-p.s/2,-p.s/2,p.s,p.s*.6);cx.restore()});if(t-t0<6500)raf=requestAnimationFrame(f);else cx.clearRect(0,0,cv.width,cv.height)})(t0)}
+let fon=0;async function finale(){if(fon)return;fon=1;const f=$("#fin"),t=$("#ft");f.classList.add("on");const say=async(s,ms)=>{t.style.opacity=0;await sl(500);t.innerHTML=s;t.style.opacity=1;await sl(ms)};await say("WAIT... PALAK.",1800);await say("ONE LAST THING.",1800);await say("THE WORLD HAS BILLIONS OF PEOPLE...",2400);await say("BUT THERE IS ONLY ONE YOU.",2400);await say("HAPPY BIRTHDAY, PALAK! ❤️",600);conf();await sl(2200);t.innerHTML+='<p class="hand" style="font-size:.45em;margin-top:18px">STAY BEAUTIFUL. STAY HAPPY. STAY ICONIC. STAY PUNJABI.</p>';$("#fx").style.display="inline-block"}
+$("#last").onclick=finale;$("#fx").onclick=()=>{$("#fin").classList.remove("on");fon=0;$("#fx").style.display="none"};
+new IntersectionObserver((es,ob)=>es.forEach(e=>{if(e.isIntersecting){fon||0;$("#end")==e.target&&setTimeout(()=>{if(e.target.getBoundingClientRect().top<innerHeight)finale()},9000)}}),{threshold:.9}).observe($("#end"));
+// scroll reveal + surprise compliment per section
+const seen=new Set();new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");if(!seen.has(e.target.id)&&seen.size>0&&seen.size%3==0)setTimeout(()=>toast("✨ "+R(C)),700);seen.add(e.target.id)}}),{threshold:.2}).observe&&$$("section").forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){s.classList.add("in");if(!seen.has(s.id)){seen.add(s.id);if(seen.size%3==0)setTimeout(()=>toast("✨ "+R(C)),700)}}}),{threshold:.15}).observe(s));
+// surprises
+let logo=0;$("#logo").onclick=e=>{if(++logo%5==0){burst(...ev(e),30);toast("Secret unlocked: you found the logo surprise. Palak = legend. 🎉")}};
+$("#sparkle").onclick=e=>{burst(...ev(e),10);toast("Hidden behind the sparkle: you were the best part of this year’s planning. ✨")};
+$("#heart").onclick=e=>{burst(...ev(e),10,["❤️","💖"]);toast("Secret message: a best friend like you is a lifetime’s luck. ❤️")};
+function sp(emoji,fn){const b=document.createElement("button");b.className="sp";b.textContent=emoji;b.setAttribute("aria-label","surprise");b.style.left=(10+Math.random()*75)+"vw";b.style.top=(20+Math.random()*55)+"vh";b.onclick=e=>{burst(...ev(e),12);fn(e);b.remove()};document.body.append(b);setTimeout(()=>b.remove(),14000)}
+function butterfly(){const b=document.createElement("button");b.className="bf";b.textContent="🦋";b.setAttribute("aria-label","butterfly");b.onclick=e=>{burst(...ev(e),8,["🦋","✨"]);toast("The butterfly says: you make everything around you bloom. 🦋");b.remove()};document.body.append(b);setTimeout(()=>b.remove(),12500)}
+function bloom(){const x=Math.random()*(innerWidth-60),y=innerHeight*.3+Math.random()*innerHeight*.4,b=document.createElement("button");b.className="sp";b.textContent="🌱";b.setAttribute("aria-label","flower");b.style.cssText=`left:${x}px;top:${y}px`;b.onclick=e=>{b.textContent="🌸";burst(...ev(e),10,["🌸","🌼"]);toast(R(W));setTimeout(()=>b.remove(),900)};document.body.append(b);setTimeout(()=>b.remove(),12000)}
+function schedule(){const acts=[()=>sp("⭐",()=>toast("⭐ "+R(C))),butterfly,()=>sp("🎁",()=>toast("🎁 Surprise! "+R(C))),()=>toast("Palak appreciation reminder: You’re amazing."),bloom];let i=0;setTimeout(function n(){acts[i++%acts.length]();setTimeout(n,28000+Math.random()*12000)},12000)}
+// sound
+let AC,mg,bg,mTimer,step=0,mOn=true;
+const MEL=[523,659,784,659,880,784,659,587,523,659,784,1047,988,784,659,784,698,880,1047,880,784,659,587,659,523,587,659,784,659,587,523,0],BASS=[262,262,330,330,349,349,262,196];
+function ac(){if(!AC){AC=new(window.AudioContext||window.webkitAudioContext)();mg=AC.createGain();mg.gain.value=.6;mg.connect(AC.destination);bg=AC.createGain();bg.gain.value=mOn?1:0;bg.connect(AC.destination)}if(AC.state=="suspended")AC.resume();return AC}
+function tone(f,t,d,v,type,dest){const o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(dest);o.start(t);o.stop(t+d+.05)}
+function music(){ac();if(mTimer)return;let nt=AC.currentTime+.1;mTimer=setInterval(()=>{if(AC.state!="running")return;if(nt<AC.currentTime)nt=AC.currentTime+.1;while(nt<AC.currentTime+.6){const f=MEL[step%32];if(f)tone(f,nt,.9,.05,"triangle",bg);if(step%4==0)tone(BASS[(step/4|0)%8],nt,1.6,.04,"sine",bg);nt+=.42;step++}},200)}
+function pop(){try{ac();const t=AC.currentTime,f=R([784,880,988,1175]);tone(f,t,.14,.09,"sine",mg);tone(f*1.5,t+.05,.18,.06,"sine",mg)}catch(e){}}
+document.addEventListener("click",e=>{if(e.target.closest("button"))pop()},true);
+$("#enter").addEventListener("click",music);
+$("#mu").onclick=()=>{mOn=!mOn;$("#mu").textContent=mOn?"🎵":"🔇";if(bg)bg.gain.value=mOn?1:0};
+document.addEventListener("visibilitychange",()=>{if(!AC)return;document.hidden?AC.suspend():AC.resume()});
+</script></body></html>
